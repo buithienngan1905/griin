@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Link AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Link Font Awesome -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Link CSS -->
@@ -21,7 +22,7 @@
     <!-- Link W3Schools -->
   </head>
   <body>
-      <div class="loader">
+      <!-- <div class="loader">
         <div class="container-loader">
           <span></span> 
           <span></span>
@@ -29,27 +30,29 @@
           <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
           <span class="loader-content">Loading...</span>
         </div>
-        </div>
-        
-    <div class="noisy-effect-background"></div>
+      </div>     -->
     <div id="wrapper">
+      <a href="#" class="backtotop">
+        <img src="img/BackToTop.png" alt="">
+      </a>
+      <div class="noisy-effect-background"></div>
       <!-- HEADER -->
-      <div class="header">
+      <div class="header sticky-top">
         <div class="container px-1">
-          <nav id="navbar" class="navbar sticky navbar-dark bg-black px-1">
+          <nav id="navbar" class="navbar navbar-dark bg-black px-1">
             <a class="navbar-brand" href="#">
-              <img src="img/griin-chrome.png" alt="" />
+              <img class="HoverButton" src="img/griin-chrome.png" alt="" />
             </a>
             <ul class="nav nav-pills">
               <li class="nav-item">
-                <a class="nav-link text-white text-uppercase" href="#section1">ABOUT ME</a>
+                <a class="nav-link text-white text-uppercase" href="#section-1">ABOUT ME</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white text-uppercase" href="#section2">PORTFOLIO</a>
+                <a class="nav-link text-white text-uppercase" href="#section-2">PORTFOLIO</a>
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link text-white text-uppercase"
+                  class="nav-link accordion-button text-white text-uppercase"
                   href="#section3"
                   role="button"
                   aria-expanded="false"
@@ -60,6 +63,8 @@
           </nav>
           <div data-spy="scroll" data-target="#navbar" data-offset="0"></div>
         </div>
+        <div class="header-line"></div>
+
       </div>
       <!-- MAIN -->
       <div class="main">
@@ -93,8 +98,8 @@
         <div class="section-2">
           <div class="container">
             <div class="row mx-3">
-              <div class="col-3 mb-4" data-aos="fade-up-right"
-              data-aos-duration="1000">
+              <div class="col-3" data-aos="fade-up-right"
+              data-aos-duration="700">
                 <div data-tilt data-tilt-scale="1.1">
                   <div class="card">
                     <img src="img/Hashtag-MeToo.jpg" onclick="onClick(this)" class="card-img-top" alt="...">
@@ -104,8 +109,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 mb-4" data-aos="fade-up"
-              data-aos-duration="1000">
+              <div class="col-3" data-aos="fade-up"
+              data-aos-duration="700">
                 <div data-tilt data-tilt-scale="1.1">
                   <div class="card">
                     <img src="img/Hashtag-WomanSupportWoman.jpg" onclick="onClick(this)" class="card-img-top" alt="...">
@@ -115,8 +120,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3 mb-4" data-aos="fade-up"
-              data-aos-duration="1000">
+              <div class="col-3" data-aos="fade-up"
+              data-aos-duration="700">
                 <div data-tilt data-tilt-scale="1.1">
                   <div class="card">
                     <img src="img/Hashtag-SaveNature.jpg" onclick="onClick(this)" alt="...">
@@ -126,8 +131,8 @@
                 </div>
                 </div>
               </div>
-              <div class="col-3 mb-4" data-aos="fade-up-left"
-              data-aos-duration="1000">
+              <div class="col-3" data-aos="fade-up-left"
+              data-aos-duration="700">
                 <div data-tilt data-tilt-scale="1.1">
                   <div class="card">
                     <img src="img/Hashtag-BlackLivesMatter.jpg" onclick="onClick(this)" class="card-img-top" alt="...">
@@ -135,7 +140,6 @@
                       <button type="button" class="btn btn-light align-items-center"><h5 class="card-title card-title-margin">#BlackLivesMatter</h5></button>
                     </div>
                   </div>
-                
                 </div>
                 <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
                   <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -154,10 +158,77 @@
           </div>
         </div>
       </div>
-      <div class="section-3">
+      <div class="section-4 my-5">
         
+        <div class="container">
+          <div class="row">
+            <div class="col-3 text-center">
+              <div class="branding-container">
+                <div class="branding-container-inner" data-aos="zoom-out-down" data-aos-duration="700">
+                  <img src="img/mimish-bg.jpg" class="branding-circle"/>
+                  <img src="img/mimish.png" class="branding-img branding-img3"/>
+                </div>
+                <div class="branding-under">
+                  <img src="img/mimish-text.png" alt="">
+                  <!-- <div class="branding-name">mimish</div> -->
+                  <div class="branding-title">Cửa hàng hoa tươi cao cấp<br>từ Đà Lạt</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 text-center">
+              <div class="branding-container">
+                <div class="branding-container-inner" data-aos="zoom-out-down" data-aos-duration="700">
+                  <img src="img/PLUS1RESPECT-bg.jpg" class="branding-circle"/>
+                  <img src="img/PLUS1RESPECT.png" class="branding-img branding-img4"/>
+                </div>
+                <div class="branding-under">
+                  <img src="img/PLUS1RESPECT-text.png" alt="">
+                  <!-- <div class="branding-name">+1RESPECT</div> -->
+                  <div class="branding-title">Thương hiệu merchandise<br>độc quyền từ Riot Games</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 text-center">
+              <div class="branding-container">
+                <div class="branding-container-inner" data-aos="zoom-out-down" data-aos-duration="700">
+                  <img src="img/PLUR-bg.jpg" class="branding-circle"/>
+                  <img src="img/PLUR.png" class="branding-img branding-img1"/>
+                </div>
+                <div class="branding-under">
+                  <img src="img/PLUR-text.png" alt="">
+                  <!-- <div class="branding-name">PLUR</div> -->
+                  <div class="branding-title">Thương hiệu nội thất cao cấp<br>từ Nhật, Đức, Ý</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 text-center">
+              <div class="branding-container">
+                <div class="branding-container-inner" data-aos="zoom-out-down" data-aos-duration="700">
+                  <img src="img/humming-bg.jpg" class="branding-circle"/>
+                  <img src="img/humming.png" class="branding-img branding-img2"/>
+                </div>
+                <div class="branding-under">
+                  <img src="img/humming-text.png" alt="">
+                  <!-- <h2 class="branding-name">humming</h2> -->
+                  <div class="branding-title">Chuỗi cửa hàng Cà phê,<br>Trà và Âm Nhạc</div>
+                </div>
+              </div>
+              
+            </div>
+           
+            
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="section-3">
+        <div class="circle">
+          <div class="text-middle"></div>
+          <div class="text">
+            <p>About Me/Ngân Bùi/Portfolio/Ngân Bùi/</p>
+          </div>
+        </div>
+      </div>
+  
     <!-- LINK SCRIPT -->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
@@ -182,24 +253,12 @@
     </script>
     <!-- VANILLA -->
     <script>
-      var myVar;
-      
-      function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-      }
-      
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      }
-    </script>
-    <!-- PRE-LOADER -->
-    <script>
       function onClick(element) {
         document.getElementById("img01").src = element.src;
         document.getElementById("modal01").style.display = "block";
       }
       </script>
+    <!-- PRE-LOADING -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -208,9 +267,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script>
         setTimeout(function(){
-          $('.loader').fadeOut(1000);
-        },6000);
-      </script> -->
+          $('.loader').fadeToggle();
+        },5000);
+      </script>
+    <script>
+      const text = document.querySelector('.text p');
+      text.innerHTML = text.innerText.split("").map(
+        (char, i) =>
+        `<span style="transform:rotate(${i * 9.95}deg)">${char}</span>`
+      ).join("")
+    </script>
     <!-- Link JQUERY for preloader
   </body>
 </html>

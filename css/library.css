@@ -10,6 +10,10 @@
     font-family: font3;
     src: url("../fonts/SVN-Gilroy\ Black.otf");
 }
+@font-face{
+    font-family: font4;
+    src: url("../fonts/Original-Thin.ttf");
+}
 *{
     margin: 0;
     padding: 0;
