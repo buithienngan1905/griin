@@ -1,6 +1,12 @@
 body{
     scroll-behavior: smooth;
 }
+.active{
+    color: rgb(255, 1, 1);
+    background-color: rgb(160, 160, 160); 
+    border-radius: 5px;   
+    padding: 6px;
+}
 .aboutme h1{
     font-family: font3;
     font-size: 36px;
@@ -8,13 +14,19 @@ body{
     margin: 0;
 }
 .header{
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow:0 0 100px rgba(255, 255, 255, 0.5);
+    transition-duration: 0.5s;
+    transition-delay: 0.05s;
+}
+.header:hover{
     background-color: rgba(0, 0, 0, 1);
-    box-shadow:0 0 100px rgba(255, 255, 255, 0.2);
+
 }
 .header-line{
     width: 100%;
     height:1px;
-    background-color: rgba(255, 255, 255, 1);;
+    background-color: rgba(255, 255, 255, 0.5);;
 }
 .loader{
     position: fixed;
@@ -182,29 +194,18 @@ body{
     display: none;
     text-align: center;
 }
-.backtotop{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+
 .backtotop-img{
     position:fixed;
-    z-index: 11111;
+    z-index: 1000;
     width: 50px;
     height: 50px;
     bottom: 50px;
     right: 50px;
     filter:drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
-}
-.backtotop-text{
-    width:300%;
-    position:fixed;
-    z-index: 11111;
-    bottom: 5px;
-    right: 25px;
-    position:absolute;
-    /* visibility: hidden;
-    opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
 }
 .backtotop-img img{
     width: 50px;
@@ -212,13 +213,15 @@ body{
     transition-duration: 0.5s;
     transition-delay: 0.25s;
 }
-.backtotop img:hover{
-    transform: rotate(-45deg) scale(120%);
-}
-/* .backtotop-img:hover .backtotop-text{
+.backtotop-img.active{
     visibility: visible;
     opacity: 1;
-} */
+    background-color:  rgba(255, 255, 255, 0);
+}   
+.backtotop-img:hover{
+    transform: translateY(-15px) scale(115%);
+}
+
 .noisy-effect-background {
     position: fixed;
     display: block;
@@ -324,20 +327,48 @@ body{
 body{
     position: relative;
 }
+.nav-item{
+    position: relative;
+}
 .nav-item a{
     font-size: 18px;
     line-height: 28px;
-    color: white;
+    color: rgb(153, 153, 153)!important;
     font-family: font1;
     padding: 0 48px;
+    transition-duration: 0.5s;
+    transition-delay: 0.005s;
 }
-
+.nav-item i{
+    top: 5.4px;
+    left: 0px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0.005s;
+}
+.nav-item:hover .nav-item i{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(25px);
+}
+.nav-item:hover .nav-item a{
+    font-family: font1;
+    transform: scale(110%);
+    color: rgb(255, 255, 255)!important;
+}
 .navbar-brand{
     width: 100px;
     overflow: hidden;
 }
 .navbar-brand img{
     width: 100%;
+    transition-duration: 0.5s;
+    transition-delay: 0.005s;
+}
+.navbar-brand img:hover{
+    transform: scale(110%);
 }
 .section-5 img{
 width: 100%;

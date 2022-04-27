@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Final WD</title>
+    <title>Ngân Bùi PORTFOLIO</title>
+    <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"/>
     <!-- Link Bootstrap -->
@@ -22,11 +23,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Link W3Schools -->
   </head>
-  <body>
-
+  <body data-spy="scroll" data-target="#navbar" data-offset="0">
       <div class="loader animate__animated animate__slow animate__delay-5s animate__slideOutUp">
-
-      <div class="loader">
         <div class="container-loader">
           <span></span> 
           <span></span>
@@ -35,46 +33,33 @@
           <span class="loader-content">Loading...</span>
         </div>
       </div>    
-
-      </div>
     <div id="wrapper">
       <div class="row">
-        <div class="col-12 backtotop">
-          <a href="#" class="backtotop-img">
-            <img src="img/BackToTop.png" alt="">
-          </a>
-          <div class="backtotop-text">
-            <p>BACK TO TOP</p>
-          </div>
+        <div class="col-lg-12">
+          <div class="backtotop-img"><a href="#"><img src="img/BackToTop.png" alt=""></a></div>
+          <!-- <div class="backtotop-text"><p>BACK TO TOP</p></div> -->
         </div>
       </div>
       <div class="noisy-effect-background"></div>
       <!-- HEADER sticky-top-->
-      <div class="header">
+      <div class="header sticky-top">
         <div class="container px-1">
           <nav id="navbar" class="navbar navbar-dark bg-black px-1">
             <a class="navbar-brand" href="#">
               <img class="HoverButton" src="img/griin-chrome.png" alt="" />
             </a>
             <ul class="nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link text-white text-uppercase" href="#aboutme">ABOUT ME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white text-uppercase" href="#portfolio">PORTFOLIO</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link accordion-button text-white text-uppercase"
-                  href="#section3"
-                  role="button"
-                  aria-expanded="false"
-                  >CONTACT</a
-                >
-              </li>
+              <div class="nav-item"><li class="nav-item" style="display:flex;align-items:center">
+                <a class="nav-link text-white text-uppercase" href="#about-me"><i class="fa fa-angle-double-right" style="font-size:18px;color:white" aria-hidden="true"></i>ABOUT ME</a>
+              </li></div>
+              <div class="nav-item"><li class="nav-item" style="display:flex;align-items:center">
+                <a class="nav-link text-white text-uppercase" href="#portfolio"><i class="fa fa-angle-double-right" style="font-size:18px;color:white" aria-hidden="true"></i>PORTFOLIO</a>
+              </li></div>
+              <div class="nav-item"><li class="nav-item" style="display:flex;align-items:center">
+                <a class="nav-link accordion-button text-white text-uppercase" href="#section3" role="button" aria-expanded="false"><i class="fa fa-angle-double-right" style="font-size:18px;color:white" aria-hidden="true"></i>CONTACT</a>
+              </li></div>
             </ul>
           </nav>
-          <div data-spy="scroll" data-target="#navbar" data-offset="0"></div>
         </div>
         <div class="header-line"></div>
 
@@ -82,7 +67,7 @@
       <!-- MAIN -->
       <div class="main">
         <!-- MAIN - Section 1 -->
-        <div class="section-1 py-5" id="aboutme">
+        <div class="section-1 py-5" id="about-me">
           <div class="container">
             <div class="row mt-5">
               <div class="col-12">
@@ -118,12 +103,13 @@
                 </p>
               </div>
               <div class="col-12 text-center pb-5">
-                <a href="#section-2"><button type="button" class="btn btn-outline-light" style="font-family:font2">Xem các dự án cá nhân <i class="fa fa-angle-down" aria-hidden="true"></i></button></a>
+                <a href="#portfolio"><button type="button" class="btn btn-outline-light" style="font-family:font2">Xem các dự án cá nhân <i class="fa fa-angle-down" aria-hidden="true"></i></button></a>
               </div>
             </div>
           </div>
         </div>
         <!-- MAIN - Section 2 -->
+        <div id="portfolio" data-spy="scroll" data-target="#navbar-example2" data-offset="0"></div>
         <div class="headline-numb" data-aos="fade-left" data-aos-duration="600"><h1>01</h1></div>
         <div class="headline" data-aos="fade-left" data-aos-duration="600">
           <div class="headline-content">
@@ -145,7 +131,7 @@
           </div>
         </div>
         <!-- Section HEADER -->
-        <div class="section-2" id="portfolio">
+        <div class="section-2">
           <div class="container">
             <div class="row pt-5">
               <div class="col-6 px-5">
@@ -444,7 +430,7 @@
       "max-glare": 0.2,
     });
     </script>
-    <!-- VANILLA -->
+    <!-- VANILLA -->  
     <script>
       function onClick(element) {
         document.getElementById("img01").src = element.src;
@@ -470,6 +456,12 @@
         `<span style="transform:rotate(${i * 12}deg)">${char}</span>`
       ).join("")
     </script>
-    <!-- Link JQUERY for preloader
+
+    <script type="text/javascript">
+      window.addEventListener('scroll', function(){
+        var scroll = document.querySelector('.backtotop-img');
+        scroll.classList.toggle("active" , window.scrollY > 500)
+      })
+    </script>
   </body>
 </html>
