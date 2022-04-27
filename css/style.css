@@ -1,6 +1,12 @@
 body{
     scroll-behavior: smooth;
 }
+.aboutme h1{
+    font-family: font3;
+    font-size: 36px;
+    color:white;
+    margin: 0;
+}
 .header{
     background-color: rgba(0, 0, 0, 1);
     box-shadow:0 0 100px rgba(255, 255, 255, 0.2);
@@ -177,6 +183,11 @@ body{
     text-align: center;
 }
 .backtotop{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.backtotop-img{
     position:fixed;
     z-index: 11111;
     width: 50px;
@@ -185,7 +196,17 @@ body{
     right: 50px;
     filter:drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
 }
-.backtotop img{
+.backtotop-text{
+    width:300%;
+    position:fixed;
+    z-index: 11111;
+    bottom: 5px;
+    right: 25px;
+    position:absolute;
+    /* visibility: hidden;
+    opacity: 0; */
+}
+.backtotop-img img{
     width: 50px;
     height: 50px;
     transition-duration: 0.5s;
@@ -194,6 +215,10 @@ body{
 .backtotop img:hover{
     transform: rotate(-45deg) scale(120%);
 }
+/* .backtotop-img:hover .backtotop-text{
+    visibility: visible;
+    opacity: 1;
+} */
 .noisy-effect-background {
     position: fixed;
     display: block;
@@ -245,7 +270,7 @@ body{
     bottom: -20px;
     right: -500px;
     width: 700px;
-    height: 100vh;
+    height: 100%;
     position: relative;
     display: block;
     margin: 50px;
@@ -308,11 +333,14 @@ body{
 }
 
 .navbar-brand{
-    width: 120px;
+    width: 100px;
     overflow: hidden;
 }
 .navbar-brand img{
     width: 100%;
+}
+.section-5 img{
+width: 100%;
 }
 
 .section-1{
@@ -438,7 +466,7 @@ body{
     left: 50%;
     font-size: 30px;
     transform-origin: 0 130px;
-    font-family: font4;
+    font-family: font1;
     word-spacing: 5px;;
     color:white;
     justify-content: center;
@@ -612,6 +640,165 @@ body{
     width: 50%;
     /* height: 100px; */
 }
+
+.headline{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    overflow: hidden;
+}
+.headline div{
+    position: relative;
+    width: 50%;
+    background: #000000;
+    overflow: hidden;
+}
+.headline div:nth-child(1){
+    position: relative;
+    width: 20%;
+    background: url("../img/LetterO.gif");
+    filter: blur(3px);
+    background-size: 200%;
+    background-position: center;
+    overflow: hidden;
+}
+.headline div:nth-child(1) h2{
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-fill-color: transparent;
+    left: 100%;
+}
+.headline div:nth-child(2) h2{
+
+    left: 100%;
+}
+.headline div h2{
+    position: absolute;
+    white-space: nowrap;
+    font-size: 100px;
+    animation: textscroll 60s linear infinite;
+    color:#fff;
+    font-family: font4;
+    text-transform: uppercase;
+    margin:0!important;
+    padding: 10px 0;
+}
+@keyframes textscroll{
+    0%{
+        transform:translateX(-10%);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+.headline2{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+}
+.headline2 div{
+    position: relative;
+    width: 50%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.headline2 div:nth-child(1){
+    position: relative;
+    width: 50%;
+    background: #ffffff;
+    background-size: cover;
+    overflow: hidden;
+    
+}
+.headline2 div:nth-child(1) h2{
+    left: 100%;
+    color:rgb(0, 0, 0);
+}
+.headline2 div h2{
+    margin:0!important;
+    padding: 5px 0;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 30px;
+    animation: textscroll2 120s linear infinite;
+    color:rgb(0, 0, 0);
+    font-family: font3;
+    text-transform: uppercase;
+}
+@keyframes textscroll2{
+    0%{
+        transform:translateX(-50%);
+    }
+    100%{
+        transform:translateX(50);
+    }
+}
+.headline-numb h1{
+    margin-top: 20px;
+    position: absolute;
+    left: 10px;
+    z-index: 999;
+    font-family: font3;
+    font-size: 120px;
+    color:white;
+}
+.thebodyshop{
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    height: 300px;
+    border: 1px solid white;
+    padding: 24px;
+}
+.tbs-tagline{
+    position: absolute;
+    top: 50px;
+    left: -70px;
+    transition-duration: 0.5s;
+    transition-delay: 0.05s;
+    cursor: pointer;
+}
+.tbs-tagline p{
+    background-color: white;
+    color:black;
+    padding: 6px 12px;
+    font-family:font2;
+    font-size: 16px;
+}
+.tbs-tagline:hover{
+    transform: scale(120%);
+}
+.tbs-section{
+    width: 130px;
+    overflow: hidden;
+}
+.tbs-section img{
+    filter:drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+    cursor: pointer;
+    width: 100%;
+    transition-duration: 0.5s;
+    transition-delay: 0.05s;
+}
+.thebodyshop2{
+    border-top: 0 solid white!important;
+    border-radius: 0 0 15px 15px;
+    height: 300px;
+    border: 1px solid white;
+    padding: 24px;
+}
+.tbs-section img:hover{
+    transform: scale(120%);
+}
+
+
+
+
+
+
+
 
 
 
